@@ -20,7 +20,7 @@ import {RouterLink} from "vue-router";
         </div>
         
         <!-- preloading images -->
-        <img src="../assets/destination/image-moon.png" style="display: none;">
+        <!-- <img src="../assets/destination/image-moon.png" style="display: none;"> -->
     </section>
 </template>
 
