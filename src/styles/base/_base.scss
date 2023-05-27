@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital@0;1&family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+
+html {
+  background-image:
+    url('assets/crew/background-crew-desktop.jpg'),
+    url('assets/destination/background-destination-desktop.jpg'),
+    url('assets/home/background-home-desktop.jpg'),
+    url('assets/technology/background-technology-desktop.jpg');
+  background-size: 0;
+
+  @include breakpoint-upto($dev-width-md) {
+    background-image:
+    url('assets/crew/background-crew-tablet.jpg'),
+    url('assets/destination/background-destination-tablet.jpg'),
+    url('assets/home/background-home-tablet.jpg'),
+    url('assets/technology/background-technology-tablet.jpg');
+  }
+
+  @include breakpoint-upto($dev-width-sm) {
+    background-image:
+    url('assets/crew/background-crew-mobile.jpg'),
+    url('assets/destination/background-destination-mobile.jpg'),
+    url('assets/home/background-home-mobile.jpg'),
+    url('assets/technology/background-technology-mobile.jpg');
+  }
+}
+
+// Core
+body {
+  font-family: $ff-text;
+  font-weight: $fw-regular;
+  font-size: $fs-txt-300;
+  color: $clr-primary-100;
+  letter-spacing: 0.7px;
+  background: $clr-primary-500;
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+
+  @include breakpoint-upto(1184px) {
+    max-width: 100%;
+    padding: 0 2rem;
+  }
+}
+
+// CSS reset
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

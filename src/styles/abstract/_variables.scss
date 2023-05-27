@@ -1,0 +1,32 @@
+// Colors
+$clr-primary-500: #0B0D17;
+$clr-accent-400: #D0D6F9;
+$clr-primary-100: #FFF;
+$clr-transparent-100: rgba(255, 255, 255, 0.04);
+
+// Fonts
+$ff-heading: 'Bellefair', serif;
+$ff-text: 'Barlow Condensed', sans-serif;
+
+// Font sizes
+$fs-heading-500: 9.375rem; // 150px
+$fs-heading-400: 6.25rem; // 100px
+$fs-heading-300: 3.5rem; // 56px
+$fs-heading-200: 2rem; // 32px
+$fs-heading-100: 1.75rem; // 28px
+
+$fs-txt-300: 1.125rem; // 18px
+$fs-txt-200: 1rem; // 16px
+$fs-txt-100: 0.875rem; // 14px
+
+// Font weights
+$fw-regular: 300;
+$fw-bold: 700;
+
+
+// Transition
+$transition-300: all 300ms ease-in-out;
+
+// Device widths
+$dev-width-md: 1024px;
+$dev-width-sm: 676px;

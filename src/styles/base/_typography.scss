@@ -1,0 +1,141 @@
+a {
+    font: inherit;
+    color: inherit;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.heading {
+    text-transform: uppercase;
+    font-family: $ff-heading;
+}
+
+.ff-primary {
+    font-family: $ff-text;
+}
+
+// Text colors
+.clr-primary {
+    color: $clr-primary-100;
+}
+
+.clr-primary-dark {
+    color: $clr-primary-500;
+}
+
+.clr-accent {
+    color: $clr-accent-400;
+}
+
+
+// Font sizes
+$font-sizes: (
+    "heading-500": $fs-heading-500,
+    "heading-400": $fs-heading-400,
+    "heading-300": $fs-heading-300,
+    "heading-200": $fs-heading-200,
+    "heading-100": $fs-heading-100,
+    "txt-300": $fs-txt-300,
+    "txt-200": $fs-txt-200,
+    "txt-100": $fs-txt-100
+);
+
+@each $name, $size in $font-sizes {
+    .fs-#{$name} {
+        font-size: $size;
+        line-height: $size + 0.4;
+    }
+}
+
+.fs-txt-300 {
+    line-height: 32px;
+    font-family: 'Barlow', sans-serif;
+    letter-spacing: 0;
+}
+
+@include breakpoint-upto($dev-width-md) {
+    $font-sizes: (
+        "heading-400": 5rem, // 80px
+        "heading-300": 2.875rem, // 46px
+        "heading-100": 1.25rem, // 18px
+        "txt-300": 1rem, // 16px
+    );
+
+    @each $name, $size in $font-sizes {
+        .fs-#{$name} {
+            font-size: $size;
+            line-height: $size + 0.4;
+        }
+    }
+}
+
+@include breakpoint-upto($dev-width-sm) {
+    $font-sizes: (
+        "heading-500": 5rem, // 80px
+        "heading-400": 3.5rem, // 56px
+        "heading-300": 1.5rem, // 24px
+        "heading-200": 1.25rem, // 20px
+        "heading-100": 1rem,
+        "txt-200": 15px,
+    );
+
+    @each $name, $size in $font-sizes {
+        .fs-#{$name} {
+            font-size: $size;
+            line-height: $size + 0.4;
+        }
+    }
+}
+
+// Character space
+.ch-space {
+    &-sm {
+        letter-spacing: 2.35px;
+    }
+
+    &-md {
+        letter-spacing: 2.7px;
+    }
+
+    &-lg {
+        letter-spacing: 4.75px;
+    }
+}
+
+.line-height-txt {
+    line-height: 2rem;
+}
+
+.text-center {
+    @include breakpoint-upto($dev-width-md) {
+        &-md {
+            text-align: center;
+        }
+    }
+    
+    @include breakpoint-upto($dev-width-sm) {
+        &-sm {
+            text-align: center;
+        }
+    }
+}
+
+.section-title {
+    text-transform: uppercase;
+
+    .number {
+        opacity: 0.5;
+        padding-right: 0.8rem;
+        font-weight: $fw-bold;
+
+        @include breakpoint-upto($dev-width-md) {
+            padding-right: 0.4rem;
+        }
+
+        @include breakpoint-upto($dev-width-sm) {
+            padding-right: 0rem;
+        }
+    }
+}
