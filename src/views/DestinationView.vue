@@ -36,12 +36,12 @@ export default {
 
             <div class="destinations-section__tab" v-if="destinations.length">
                 <!-- preloading images -->
-                <!-- <img
+                <img
                     v-for="destination in destinations"
                     :src="destination.images.png"
                     style="display: none;"
                     preload
-                > -->
+                >
 
                 <!-- Image -->
                 <div class="destinations-section__img">
