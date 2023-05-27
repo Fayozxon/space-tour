@@ -3,26 +3,26 @@
 
 html {
   background-image:
-    url('assets/crew/background-crew-desktop.jpg'),
-    url('assets/destination/background-destination-desktop.jpg'),
-    url('assets/home/background-home-desktop.jpg'),
-    url('assets/technology/background-technology-desktop.jpg');
+    url('../src/assets/crew/background-crew-desktop.jpg'),
+    url('../src/assets/destination/background-destination-desktop.jpg'),
+    url('../src/assets/home/background-home-desktop.jpg'),
+    url('../src/assets/technology/background-technology-desktop.jpg');
   background-size: 0;
 
   @include breakpoint-upto($dev-width-md) {
     background-image:
-    url('assets/crew/background-crew-tablet.jpg'),
-    url('assets/destination/background-destination-tablet.jpg'),
-    url('assets/home/background-home-tablet.jpg'),
-    url('assets/technology/background-technology-tablet.jpg');
+    url('../src/assets/crew/background-crew-tablet.jpg'),
+    url('../src/assets/destination/background-destination-tablet.jpg'),
+    url('../src/assets/home/background-home-tablet.jpg'),
+    url('../src/assets/technology/background-technology-tablet.jpg');
   }
 
   @include breakpoint-upto($dev-width-sm) {
     background-image:
-    url('assets/crew/background-crew-mobile.jpg'),
-    url('assets/destination/background-destination-mobile.jpg'),
-    url('assets/home/background-home-mobile.jpg'),
-    url('assets/technology/background-technology-mobile.jpg');
+    url('../src/assets/crew/background-crew-mobile.jpg'),
+    url('../src/assets/destination/background-destination-mobile.jpg'),
+    url('../src/assets/home/background-home-mobile.jpg'),
+    url('../src/assets/technology/background-technology-mobile.jpg');
   }
 }
 

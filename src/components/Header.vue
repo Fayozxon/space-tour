@@ -22,7 +22,7 @@ export default {
         <div class="container">
             <!-- Logo -->
             <a href="/">
-                <!-- <img src="logo.svg" alt="Logo" class="header__brand"> -->
+                <img src="../assets/logo.svg" alt="Logo" class="header__brand">
             </a>
             <!-- Navigation -->
             <div class="nav-bg"></div>

@@ -20,18 +20,18 @@
 .crew-section {
     width: 100%;
     min-height: 100vh;
-    background: url('assets/crew/background-crew-desktop.jpg') no-repeat;
+    background: url('../assets/crew/background-crew-desktop.jpg') no-repeat;
     background-size: cover;
     background-position: center;
     padding-top: 212px;
 
     @include breakpoint-upto($dev-width-md) {
-        background-image: url('assets/crew/background-crew-tablet.jpg');
+        background-image: url('../assets/crew/background-crew-tablet.jpg');
         padding-top: 136px;
     }
 
     @include breakpoint-upto($dev-width-sm) {
-        background-image: url('assets/crew/background-crew-mobile.jpg');
+        background-image: url('../assets/crew/background-crew-mobile.jpg');
         padding-top: 88px;
     }
 }

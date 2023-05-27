@@ -92,18 +92,18 @@ export default {
 .destinations-section {
     width: 100%;
     min-height: 100vh;
-    background: url('assets/destination/background-destination-desktop.jpg') no-repeat;
+    background: url('../assets/destination/background-destination-desktop.jpg') no-repeat;
     background-size: cover;
     background-position: center;
     padding-top: 212px;
 
     @include breakpoint-upto($dev-width-md) {
-        background-image: url('assets/destination/background-destination-tablet.jpg');
+        background-image: url('../assets/destination/background-destination-tablet.jpg');
         padding-top: 136px;
     }
 
     @include breakpoint-upto($dev-width-sm) {
-        background-image: url('assets/destination/background-destination-mobile.jpg');
+        background-image: url('../assets/destination/background-destination-mobile.jpg');
         padding-top: 88px;
     }
 

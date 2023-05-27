@@ -20,18 +20,18 @@
 .technology-section {
     width: 100%;
     min-height: 100vh;
-    background: url('assets/technology/background-technology-desktop.jpg') no-repeat;
+    background: url('../assets/technology/background-technology-desktop.jpg') no-repeat;
     background-size: cover;
     background-position: center;
     padding-top: 212px;
     
     @include breakpoint-upto($dev-width-md) {
-        background-image: url('assets/technology/background-technology-tablet.jpg');
+        background-image: url('../assets/technology/background-technology-tablet.jpg');
         padding-top: 136px;
     }
 
     @include breakpoint-upto($dev-width-sm) {
-        background-image: url('assets/technology/background-technology-mobile.jpg');
+        background-image: url('../assets/technology/background-technology-mobile.jpg');
         padding-top: 88px;
     }
 }

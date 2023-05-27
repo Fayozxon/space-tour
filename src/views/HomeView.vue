@@ -20,7 +20,7 @@ import {RouterLink} from "vue-router";
         </div>
         
         <!-- preloading images -->
-        <img src="assets/destination/image-moon.png" style="display: none;">
+        <img src="../assets/destination/image-moon.png" style="display: none;">
     </section>
 </template>
 
@@ -30,18 +30,18 @@ import {RouterLink} from "vue-router";
 .home-section {
     width: 100%;
     min-height: 100vh;
-    background: url('assets/home/background-home-desktop.jpg') no-repeat;
+    background: url('../assets/home/background-home-desktop.jpg') no-repeat;
     background-size: cover;
     background-position: center;
     padding-top: 30vh;
 
     @include breakpoint-upto($dev-width-md) {
-        background-image: url('assets/home/background-home-tablet.jpg');
+        background-image: url('../assets/home/background-home-tablet.jpg');
         padding-top: 252px;
     }
 
     @include breakpoint-upto($dev-width-sm) {
-        background-image: url('assets/home/background-home-mobile.jpg');
+        background-image: url('../assets/home/background-home-mobile.jpg');
         padding-top: 172px;
     }
 
