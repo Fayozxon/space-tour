@@ -3,6 +3,7 @@ export default {
     data() {
         return {
             destinations: [],
+            destination: '',
             activeTab: 0
         }
     },
@@ -12,6 +13,11 @@ export default {
             let data = await res.json();
 
             this.destinations = data;
+        }
+    },
+    computed: {
+        getInformation() {
+            return this.destinations[this.activeTab];
         }
     },
     created() {
@@ -30,20 +36,20 @@ export default {
 
             <div class="destinations-section__tab" v-if="destinations.length">
                 <!-- preloading images -->
-                <img
+                <!-- <img
                     v-for="destination in destinations"
                     :src="destination.images.png"
                     style="display: none;"
                     preload
-                >
+                > -->
 
                 <!-- Image -->
                 <div class="destinations-section__img">
                     <transition mode="out-in" name="fade" appear>
                         <img
-                            :src="destinations[activeTab].images.png"
-                            :key="destinations[activeTab].id"
-                            :alt="`${destinations[activeTab].name} image`"
+                            :src="getInformation.images.png"
+                            :key="getInformation.id"
+                            :alt="`${getInformation.name} image`"
                         preload>
                     </transition>
                 </div>
@@ -63,18 +69,18 @@ export default {
     
                     <!-- Info -->
                     <transition mode="out-in" name="fade" appear>
-                        <div class="tab-info" :key="destinations[activeTab].id">
-                            <h2 class="title heading fs-heading-400">{{ destinations[activeTab].name }}</h2>
+                        <div class="tab-info" :key="getInformation.id">
+                            <h2 class="title heading fs-heading-400">{{ getInformation.name }}</h2>
                             <p class="description | fs-txt-300 clr-accent">
-                                {{ destinations[activeTab].description }}
+                                {{ getInformation.description }}
                             </p>
                             <span class="line"></span>
     
                             <div class="tab-distance">
                                 <p class="fs-txt-100 clr-accent ch-space-sm">AVG. DISTANCE</p>
                                 <p class="fs-txt-100 clr-accent ch-space-sm">EST. TRAVEL TIME</p>
-                                <h5 class="fs-heading-100 heading">{{ destinations[activeTab].distance }}</h5>
-                                <h5 class="fs-heading-100 heading">{{ destinations[activeTab].travel }}</h5>
+                                <h5 class="fs-heading-100 heading">{{ getInformation.distance }}</h5>
+                                <h5 class="fs-heading-100 heading">{{ getInformation.travel }}</h5>
                             </div>
                         </div>
                     </transition>
@@ -169,6 +175,7 @@ export default {
                 color: $clr-accent-400;
                 cursor: pointer;
                 transition: $transition-300;
+                user-select: none;
 
                 &::before {
                     content: '';
