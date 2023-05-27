@@ -18,9 +18,6 @@ import {RouterLink} from "vue-router";
                 Explore
             </RouterLink>
         </div>
-        
-        <!-- preloading images -->
-        <!-- <img src="../assets/destination/image-moon.png" style="display: none;"> -->
     </section>
 </template>
 
