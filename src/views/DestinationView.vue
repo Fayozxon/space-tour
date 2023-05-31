@@ -54,9 +54,9 @@ export default {
                     </transition>
                 </div>
 
-                <!-- Nav -->
                 <div class="destinations-section__info text-center-md">
 
+                    <!-- Nav -->
                     <ul class="tab-nav">
                         <li
                             v-for="destination in destinations"

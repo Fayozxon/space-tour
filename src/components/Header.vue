@@ -186,20 +186,21 @@ export default {
                 content: '';
                 position: absolute;
                 left: 0;
-                right: 5px;
                 bottom: -42px;
+                width: 0;
                 height: 3px;
                 background: $clr-primary-100;
-                opacity: 0;
                 pointer-events: none;
                 transition: $transition-300;
-            }
-
-            &:hover::before {
                 opacity: 0.5;
             }
 
+            &:hover::before {
+                width: 98%;
+            }
+
             &.active::before {
+                width: 98%;
                 opacity: 1;
             }
         }
