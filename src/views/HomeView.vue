@@ -30,7 +30,7 @@ import {RouterLink} from "vue-router";
     background: url('../assets/home/background-home-desktop.jpg') no-repeat;
     background-size: cover;
     background-position: center;
-    padding-top: 30vh;
+    padding-top: 45vh;
 
     @include breakpoint-upto($dev-width-md) {
         background-image: url('../assets/home/background-home-tablet.jpg');
