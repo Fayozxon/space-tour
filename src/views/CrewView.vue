@@ -60,7 +60,7 @@ export default {
                     <div class="tab-info" :key="getInformation.id">
                         <h2 class="role heading fs-heading-200">{{ getInformation.role }}</h2>
                         <h2 class="title heading fs-heading-300">{{ getInformation.name }}</h2>
-                        <p class="description | fs-txt-300 clr-accent">
+                        <p class="description | fs-txt-300 clr-accent line-height-txt">
                             {{ getInformation.bio }}
                         </p>
                     </div>
