@@ -3,16 +3,21 @@ import { RouterView } from 'vue-router';
 import Header from './components/Header.vue';
 
 export default {
+  data() {
+    return {
+      sources: [
+        'images/crew/image-douglas-hurley.png',
+        'images/destination/image-moon.png',
+        'images/technology/image-launch-vehicle-portrait.jpg'
+      ]
+    }
+  },
   components: { Header }
 }
 </script>
 
 <template>
   <main>
-    <!-- preloading images -->
-    <img src="images/crew/image-douglas-hurley.png" style="display: none;" preload>
-    <img src="images/destination/image-moon.png" style="display: none;" preload>
-    <img src="images/technology/image-launch-vehicle-portrait.jpg" style="display: none;" preload>
 
     <Header></Header>
 
@@ -22,6 +27,8 @@ export default {
       </transition>
     </RouterView>
 
+    <!-- preloading images -->
+    <img v-for="source in sources" :src="source" style="display: none;" preload>
 
   </main>
 </template>
