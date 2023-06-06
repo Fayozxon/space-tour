@@ -45,7 +45,7 @@ export default {
 
                 <!-- Image -->
                 <div class="destinations-section__img">
-                    <transition mode="out-in" name="fade" appear>
+                    <transition mode="out-in" name="fade-top" appear>
                         <img
                             :src="getInformation.images.png"
                             :key="getInformation.id"

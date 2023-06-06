@@ -9,6 +9,10 @@ export default {
 
 <template>
   <main>
+    <!-- preloading images -->
+    <img src="images/crew/image-douglas-hurley.png" style="display: none;" preload>
+    <img src="images/destination/image-moon.png" style="display: none;" preload>
+    <img src="images/technology/image-launch-vehicle-portrait.jpg" style="display: none;" preload>
 
     <Header></Header>
 
@@ -17,6 +21,7 @@ export default {
         <component :is="Component"></component>
       </transition>
     </RouterView>
+
 
   </main>
 </template>
@@ -31,6 +36,21 @@ export default {
 
 .fade-enter-active,
 .fade-leave-active {
+  transition: $transition-300;
+}
+// from bottom
+.fade-top-enter-from {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.fade-top-leave-to {
+  opacity: 0;
+  transform: translateY(-50px);
+}
+
+.fade-top-enter-active,
+.fade-top-leave-active {
   transition: $transition-300;
 }
 </style>
